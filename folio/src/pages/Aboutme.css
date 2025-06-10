@@ -1,0 +1,236 @@
+.about-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 3rem 1.5rem 3rem;
+  padding-top: 10% !important;
+  background: var(--bg-color);
+  color: var(--text-color);
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  width: 100%;
+  align-items: start;
+}
+
+.about-right {
+  grid-column: span 12;
+  order: 1;
+  padding-top: 7rem;
+  display: flex;
+  justify-content: center;
+}
+
+.about-left {
+  grid-column: span 12;
+  order: 2;
+}
+
+@media(min-width: 768px) {
+  .about-right {
+    grid-column: span 6;
+    order: 2;
+    align-items: center;
+    padding-top: 20% !important;
+  }
+
+  .about-left {
+    grid-column: span 6;
+    order: 1;
+  }
+}
+
+.para {
+  font-size: 0.75em; /* 12px / 16px */
+}
+
+.about-description {
+  border: 2px solid var(--accent-color);
+  padding: 3rem 1.5rem 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--card-bg);
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 5.5rem;
+  transition: box-shadow 0.3s ease;
+  color: var(--text-color);
+}
+
+.about-description:hover {
+  box-shadow: 0 0 20px var(--accent-color);
+}
+
+.about-photo {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid var(--accent-color);
+  background-image: url('./one.jpeg');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: -65px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 8px var(--accent-color);
+}
+
+.about-section {
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.about-card {
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.2rem;
+  border-left: 4px solid var(--accent-color);
+  padding-left: 1rem;
+  position: relative;
+  line-height: 1.5;
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 0 12px var(--border-color);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  color: var(--text-color);
+}
+
+.about-card:hover {
+  background-color: var(--navbar-bg);
+  box-shadow: 0 0 18px var(--accent-color);
+}
+
+.about-card h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.org {
+  color: var(--border-color);
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.date,
+.location {
+  font-size: 0.9rem;
+  color: var(--border-color);
+  margin: 0;
+  font-weight: 400;
+}
+
+.view-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: transparent;
+  border: 1.5px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+  outline-offset: 2px;
+}
+
+.view-btn:hover,
+.view-btn:focus {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+
+@media(max-width: 767px) {
+  .about-card > div {
+    padding-right: 110px;
+  }
+
+  .view-btn {
+    position: static;
+    margin-top: 0.6rem;
+    display: inline-block;
+    width: auto;
+  }
+
+  .about-left {
+    margin-top: 1rem;
+  }
+
+  .about-description {
+    width: 100%;
+    max-width: none;
+    padding-top: 5rem;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--modal-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background-color: var(--modal-bg);
+  color: var(--modal-text);
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 0 20px var(--accent-color);
+  font-size: 1rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: var(--accent-color);
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: #a1ff56;
+}
+
+.modal-text {
+  color: var(--modal-text);
+  line-height: 1.5;
+  padding-top: 5%;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 90%;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+  }
+}
