@@ -3,6 +3,8 @@ import './Home.css';
 import { useTheme } from './ThemeContext';
 import { FaLinkedin, FaGithub, FaInstagram, /*FaWhatsapp,*/ FaBars, FaTimes } from "react-icons/fa";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
+import { HashLink } from 'react-router-hash-link';
+
 
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -26,11 +28,17 @@ const Navbar = () => {
       <header className={`custom-navbar d-none d-md-flex justify-content-between align-items-center px-4 ${theme}`}>
         <h3 className="logo">Portfolio</h3>
         <nav className="d-flex gap-4">
-          <a href="#home" className="custom-link">Home</a>
-          <a href="#about" className="custom-link">About Me</a>
-          <a href="#skill" className="custom-link">Skills</a>
-          <a href="#project" className="custom-link">Projects</a>
-          <a href="#contact" className="custom-link">Contact Me</a>
+          {/* <a href="/#home" className="custom-link">Home</a>
+          <a href="/#about" className="custom-link">About Me</a>
+          <a href="/#skill" className="custom-link">Skills</a>
+          <a href="/#project" className="custom-link">Projects</a>
+          <a href="/#contact" className="custom-link">Contact Me</a> */}
+          <HashLink smooth to="/#home" className="custom-link">Home</HashLink>
+          <HashLink smooth to="/#about" className="custom-link">About Me</HashLink>
+          <HashLink smooth to="/#skill" className="custom-link">Skills</HashLink>
+          <HashLink smooth to="/#project" className="custom-link">Projects</HashLink>
+          <HashLink smooth to="/#contact" className="custom-link">Contact Me</HashLink>
+
         </nav>
         <div className="button-groups d-flex gap-2">
           <button
@@ -66,11 +74,17 @@ const Navbar = () => {
 
       {/* Mobile Sidebar */}
       <div className={sidebarOpen ? 'mobile-sidebar open' : 'mobile-sidebar'}>
-        <a href="#home" className="custom-link" onClick={() => setSidebarOpen(false)}>Home</a>
-        <a href="#about" className="custom-link" onClick={() => setSidebarOpen(false)}>About Me</a>
-        <a href="#skill" className="custom-link" onClick={() => setSidebarOpen(false)}>Skills</a>
-        <a href="#project" className="custom-link" onClick={() => setSidebarOpen(false)}>Projects</a>
-        <a href="#contact" className="custom-link" onClick={() => setSidebarOpen(false)}>Contact Me</a>
+        {/* <a href="/#home" className="custom-link" onClick={() => setSidebarOpen(false)}>Home</a>
+        <a href="/#about" className="custom-link" onClick={() => setSidebarOpen(false)}>About Me</a>
+        <a href="/#skill" className="custom-link" onClick={() => setSidebarOpen(false)}>Skills</a>
+        <a href="/#project" className="custom-link" onClick={() => setSidebarOpen(false)}>Projects</a>
+        <a href="/#contact" className="custom-link" onClick={() => setSidebarOpen(false)}>Contact Me</a> */}
+        <HashLink smooth to="/#home" className="custom-link" onClick={() => setSidebarOpen(false)}>Home</HashLink>
+        <HashLink smooth to="/#about" className="custom-link" onClick={() => setSidebarOpen(false)}>About Me</HashLink>
+        <HashLink smooth to="/#skill" className="custom-link" onClick={() => setSidebarOpen(false)}>Skills</HashLink>
+        <HashLink smooth to="/#project" className="custom-link" onClick={() => setSidebarOpen(false)}>Projects</HashLink>
+        <HashLink smooth to="/#contact" className="custom-link" onClick={() => setSidebarOpen(false)}>Contact Me</HashLink>
+
         <button
           className="btn-custom-navbar btn-outline mt-2"
           onClick={() => {

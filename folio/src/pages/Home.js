@@ -24,7 +24,7 @@ const Home = () => {
               <h3 className="profile-name mt-3">Rajkumar</h3>
               <div className="d-flex justify-content-center flex-wrap gap-3 mb-2 location-email">
                 <span className="profile-location">
-                  <MdLocationOn /> Erode, India
+                  <MdLocationOn /> Coimbatore, India
                 </span>
                 <span className="profile-email">
                   <MdEmail /> s.rajkumar@gmail.com

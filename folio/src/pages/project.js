@@ -18,8 +18,8 @@ const projects = [
     stack: ["Node.js", "Express", "MongoDB", "Nodemailer", "JWT", "React js", "Bootsrap"],
     type: "Backend",
     badgeClass: "badge-orange",
-    codeLink: "",
-    demoLink: "",
+    codeLink: "/error",
+    demoLink: "/error",
   },
   {
     title: "E-commerce Website",
@@ -29,8 +29,8 @@ const projects = [
     stack: ["Node je","Express JS", "Postgresql", "React Js", "Tailwind", "Framer Motion"],
     type: "Full Stack",
     badgeClass: "badge-blue",
-    codeLink: "",
-    demoLink: "",
+    codeLink: "/error",
+    demoLink: "/error",
   },
   {
     title: "Hetrogeneous Data Storage Management System - (College) Final Year Project",
@@ -40,8 +40,8 @@ const projects = [
     stack: ["Java", "Mysql", "Cloud server", "Spring boot", "Bootsrap"],
     type: "Frontend",
     badgeClass: "badge-pink",
-    codeLink: "",
-    demoLink: "",
+    codeLink: "/error",
+    demoLink: "/error",
   },
   {
     title: "QR Code Generator",
@@ -51,8 +51,8 @@ const projects = [
     stack: ["React", "Mysql", "Bootsrap"],
     type: "Full Stack",
     badgeClass: "badge-blue",
-    codeLink: "",
-    demoLink: "",
+    codeLink: "/error",
+    demoLink: "/error",
   },
   {
     title: "Portfolio Website Collection",
@@ -62,8 +62,8 @@ const projects = [
     stack: ["React", "Node js", "Express Js", "JWT", "Mongodb", "Bootsrap"],
     type: "Full Stack",
     badgeClass: "badge-blue",
-    codeLink: "",
-    demoLink: "",
+    codeLink: "/error",
+    demoLink: "/error",
   },
   {
     title: "Business Website",
@@ -73,8 +73,8 @@ const projects = [
     stack: ["React", "Node js", "Express Js", "JWT", "Mongodb", "Bootsrap"],
     type: "Full Stack",
     badgeClass: "badge-blue",
-    codeLink: "",
-    demoLink: "",
+    codeLink: "/error",
+    demoLink: "/error",
   }
 ];
 

@@ -1,0 +1,13 @@
+/* For Chrome, Edge, Safari */
+::-webkit-scrollbar-thumb {
+  background-color: #28a745; /* your desired scrollbar thumb color */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* scrollbar track color (optional) */
+}
+
+/* For Firefox */
+* {
+  scrollbar-color: #28a745 #f1f1f1; /* thumb color, track color */
+}

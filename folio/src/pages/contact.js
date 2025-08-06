@@ -1,4 +1,3 @@
-// File: src/pages/Contact.js
 import React, { useState } from 'react';
 import './contact.css';
 import { FiMail, FiPhone, FiMapPin, FiSend } from 'react-icons/fi';
@@ -32,8 +31,19 @@ const Contact = () => {
       });
 
       const data = await res.json();
-      setResponseMsg(data.message || 'Message sent!');
-      setFormData({ name: '', email: '', subject: '', message: '' });
+
+      if (data.message === '😍 Message sent successfully') {
+        setResponseMsg(data.message);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+
+        // Auto-close popup after 5 seconds
+        setTimeout(() => {
+          setResponseMsg('');
+        }, 5000);
+      } else {
+        setResponseMsg('❌ Something went wrong. Please try again.');
+      }
+
     } catch (err) {
       console.error(err);
       setResponseMsg('❌ Something went wrong. Please try again.');
@@ -135,9 +145,6 @@ const Contact = () => {
                   <FiSend /> Send Message
                 </button>
               </form>
-
-              {/* Response Message */}
-              {responseMsg && <p className="response-message">{responseMsg}</p>}
             </div>
           </div>
         </div>
@@ -178,6 +185,16 @@ const Contact = () => {
           </button>
         </div>
       </footer>
+
+      {/* Success Popup */}
+      {responseMsg === '😍 Message sent successfully' && (
+        <div className="popup-backdrop">
+          <div className="popup-box">
+            <h4>{responseMsg}</h4>
+            <button onClick={() => setResponseMsg('')}>Close</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
