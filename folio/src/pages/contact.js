@@ -24,7 +24,7 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch('https://rajuportfolio.onrender.com', {
+      const res = await fetch('https://rajuportfolio.onrender.com/contact_api', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
